@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-text-primary bg-bg-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-cta {
+    @apply inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold rounded-btn px-5 py-2.5 transition-all duration-200 hover:shadow-lg hover:scale-105 active:scale-95 whitespace-nowrap;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-brand text-brand font-semibold rounded-btn px-5 py-2.5 transition-all duration-200 hover:bg-brand hover:text-white;
+  }
+  .card {
+    @apply bg-white border border-border-soft rounded-card shadow-card transition-all duration-300 hover:shadow-card-hover;
+  }
+  .section-heading {
+    @apply text-section font-semibold text-text-primary;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  .score-bar {
+    @apply w-full h-1.5 bg-border-soft rounded-full overflow-hidden;
+  }
+  .score-bar-fill {
+    @apply h-full bg-brand rounded-full transition-all duration-1000;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+}
